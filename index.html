@@ -323,6 +323,18 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 .foot-vdl .vdl img { height: 52px; }
 .foot-vdl a.u { color: #e0a064; text-decoration: none; font-weight: 600; }
 
+
+/* hero reel */
+.hero-reel { background: var(--pine); color: #fff; padding: clamp(84px, 11vw, 132px) 0 clamp(28px, 4vw, 48px); }
+.reel-head { margin-bottom: 1.4rem; }
+.reel-head h2 { font-size: clamp(1.8rem, 4.2vw, 3rem); font-weight: 300; line-height: 1.05; margin-top: .4rem; }
+.reel-head h2 em { font-style: italic; color: #f0c38e; }
+.reel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.reel-card { margin: 0; border-radius: 18px; overflow: hidden; background: #0b150f; position: relative; }
+.reel-card video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.reel-card figcaption { padding: 1rem 1.2rem 1.2rem; font-size: .98rem; line-height: 1.55; color: rgba(255,255,255,.88); }
+.reel-card figcaption b { display: block; font-family: "Fraunces", serif; font-weight: 400; font-size: 1.25rem; color: #f0c38e; margin-bottom: .25rem; }
+@media (max-width: 760px) { .reel-grid { grid-template-columns: 1fr; } }
 .films { padding-bottom: clamp(40px, 6vw, 80px); }
 .films-track { display: flex; gap: 18px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; padding: 1.4rem max(var(--gutter), calc((100% - var(--wrap)) / 2 + var(--gutter))) 1.2rem; scroll-padding-inline: max(var(--gutter), calc((100% - var(--wrap)) / 2 + var(--gutter))); cursor: grab; scrollbar-width: thin; scrollbar-color: var(--accent-fill) transparent; }
 .films-track.drag { cursor: grabbing; scroll-snap-type: none; }
@@ -348,6 +360,25 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 </header>
 
 <main id="top">
+  <section class="hero-reel" id="reel" aria-labelledby="reel-h">
+    <div class="wrap">
+      <div class="reel-head">
+        <p class="eyebrow kicker" style="color:#f0c38e">Tandi hill · Village Bhua · Jibhi</p>
+        <h2 id="reel-h">Shangrila <em>Rénao</em> from above and within</h2>
+      </div>
+      <div class="reel-grid">
+        <figure class="reel-card">
+          <video class="bgvid" src="Drone_circling_apartment_buildin__c0dd739b.mp4#t=0.1" muted loop playsinline preload="metadata" aria-label="Aerial view circling the building"></video>
+          <figcaption><b>Around the building</b>A slow circle from the air, taking in the setting, the rooflines and the hillside around the stay.</figcaption>
+        </figure>
+        <figure class="reel-card">
+          <video class="bgvid" src="Camera_flying_through_villa_inte__1b6afac3.mp4#t=0.1" muted loop playsinline preload="metadata" aria-label="Camera flying through the interior"></video>
+          <figcaption><b>Flying in, room by room</b>Start above the valley, glide onto the terrace and step inside past the loft and bed, then scroll on through the photo walkthrough.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <section class="hero" id="hero" aria-labelledby="hero-title" aria-roledescription="carousel" aria-label="Shangrila Rénao photo walkthrough">
     <div class="hero-window">
       <div class="hero-bg"><img src="valley-window.jpg" alt="Pine and deodar forested valley with terraced fields and a snow-dusted ridge, seen through the cabin's floor-to-ceiling window" fetchpriority="high" decoding="async"></div>
